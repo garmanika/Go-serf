@@ -1,5 +1,16 @@
 $(function(){
-
+$('.header__slider').slick({
+    infinite:true,
+    fade: true,
+    prevArrow: '<img class="slider-arrows slider-arrows__left" src="img/Arrows-left.svg" alt="" />',
+    nextArrow: '<img class="slider-arrows slider-arrows__right" src="img/Arrows-right.svg" alt="" />',
+    asNavFor: '.slider-dots',
+})
+$('.slider-dots').slick({
+    slidesToShow: 4,
+  slidesToScroll: 4,
+    asNavFor: '.header__slider',
+})
 
 
   
