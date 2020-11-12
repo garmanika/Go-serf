@@ -22,8 +22,6 @@
   right: 80px;
   bottom: 116px;
   text-align: right;
-  color: #ffffff;
-  text-transform: uppercase;
   &-title {
     font-weight: 800;
     font-size: 80px;
@@ -60,7 +58,7 @@
   bottom: 36px;
   max-width: 920px;
   width: 100%;
-  color: #ffffff;
+
   .slick-current {
     .dots-box {
       border-top: 4px solid $green;
@@ -83,6 +81,7 @@
   &__name {
     font-weight: 300;
     line-height: 19px;
+    text-transform: capitalize;
   }
 }
 .header__aside {
@@ -93,7 +92,6 @@
   border-right: 1px solid rgba($color: #fff, $alpha: 0.25);
   height: 100vh;
   text-align: center;
-  color: #ffffff;
 }
 .header__title {
   position: absolute;
@@ -103,8 +101,7 @@
   font-weight: 800;
   max-width: 467px;
   opacity: 0.07;
-  color: #ffffff;
-  text-transform: uppercase;
+
   line-height: 156px;
   font-size: 200px;
 }
@@ -120,6 +117,7 @@
       padding-top: 6px;
       letter-spacing: 3px;
       margin-bottom: 22px;
+      text-transform: capitalize;
     }
   }
 }
@@ -145,6 +143,7 @@
   letter-spacing: 1.05px;
   position: relative;
   padding-left: 19px;
+  text-transform: capitalize;
   &::before {
     content: "";
     position: absolute;
@@ -172,14 +171,100 @@
   z-index: 9;
 }
 .line-animation {
-    stroke-dashoffset: 600;
-    stroke-dasharray: 600;
-    animation: amimdash 5s infinite 6s;
+  stroke-dashoffset: 600;
+  stroke-dasharray: 600;
+  animation: animdash 5s infinite 6s;
 }
-@keyframes amimdash{
-    to{
-        stroke-dashoffset: 0;
-    }
+@keyframes animdash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 // end header
+// start serf
+.serf {
+  padding: 160px 0 120px;
+  background-image: url(../img/serf-bg.svg);
+  background-position: right 200px;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.serf__suptitle {
+  text-align: right;
+  padding-right: 80px;
+  margin-top: -86px;
+}
+.serf-slider {
+  padding-top: 110px;
+  .slider-arrows {
+    top: 50px;
+    opacity: 0.25;
+  }
+  .slick-slide:nth-child(4n + 1){
+    .serf-box{
+      margin-top: 32px;
+    }
+  }
+  .slick-slide:nth-child(4n + 3){
+    .serf-box{
+      margin-top: 89px;
+    }
+  }
+}
+.slick-current{
+.serf-box__inner-btn{
+  display: block;
+}
+.serf-box__inner{
+  background: rgba($color: #1c2121, $alpha: 0.3);
+}
+}
+.serf-box {
+  background-position: center;
+  background-size: cover;
+
+  &__inner {
+    min-height: 750px;
+    background: rgba($color: #1c2121, $alpha: 0.85);
+    position: relative;
+    transition: all 5s;
+    &:hover{
+      background: rgba($color: #1c2121, $alpha: 0.3);
+      .serf-box__inner-btn{
+        display: block;
+      }
+    }
+    &-title {
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 36px;
+      padding: 72px 0 0 40px;
+      width: 140px;
+    }
+    &-location {
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 8px;
+      transform: rotate(-90deg);
+      position: absolute;
+      left: 40px;
+      bottom: 80px;
+      width: 0;
+      height: 0;
+      white-space: nowrap;
+      span{
+        font-weight: 100;
+      }
+    }
+    &-btn {
+      bottom: 0;
+      position: absolute;
+      text-align: center;
+      left: 0;
+      right: 0;
+      display: none;
+    }
+  }
+}
+// end serf
 @import "media";
