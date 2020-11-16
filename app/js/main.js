@@ -26,5 +26,13 @@ $('.slider-map').slick({
   asNavFor: '.surf-slider',
   focusOnSelect: true,
 })
+$('.travel__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  fade: true,
+  infinite: true,
+  prevArrow: '<img class="slider-arrows slider-arrows__left" src="img/Arrows-left.svg" alt="" />',
+  nextArrow: '<img class="slider-arrows slider-arrows__right" src="img/Arrows-right.svg" alt="" />',
+})
   
 });

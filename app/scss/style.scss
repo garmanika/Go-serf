@@ -183,7 +183,6 @@
 // end header
 // start surf
 .surf {
-  padding: 160px 0 120px;
   background-image: url(../img/surf-bg.svg);
   background-position: right 200px;
   background-repeat: no-repeat;
@@ -277,33 +276,33 @@
   background-size: cover;
   background-position: center;
   margin: 0 auto;
-    .slick-list {
+  .slick-list {
     min-height: 635px;
   }
 }
-  .slick-current {
-    .slider-dots__content {
-      display: block;
-      width: 285px;
-      padding: 28px 31px 0px 32px;
+.slick-current {
+  .slider-dots__content {
+    display: block;
+    width: 285px;
+    padding: 28px 31px 0px 32px;
+    position: absolute;
+    bottom: 35px;
+    transform: translateX(-50%);
+    &::before {
+      content: "";
       position: absolute;
-      bottom: 35px;
-      transform: translateX(-50%);
-      &::before{
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-bottom: 20px solid $green;
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent;
-        bottom: -21px;
-        left: calc(50% - 1px);
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-      }
+      width: 0;
+      height: 0;
+      border-bottom: 20px solid $green;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      bottom: -21px;
+      left: calc(50% - 1px);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
   }
+}
 
 .slider-dots__content-row {
   display: flex;
@@ -366,9 +365,9 @@
 .slider-dotsbottom--1 {
   top: 335px;
   left: 0;
-  .slider-dots__content{
+  .slider-dots__content {
     transform: translateX(0);
-    &::before{
+    &::before {
       left: 0;
     }
   }
@@ -413,13 +412,97 @@
 .slider-dotsbottom--8 {
   top: 470px;
   left: 35px;
-  .slider-dots__content{
+  .slider-dots__content {
     transform: translateX(-262px);
-    &::before{
+    &::before {
       left: auto;
       right: 0;
     }
-}
+  }
 }
 // end surf
+// start travel
+.travel {
+  background-image: url(../img/travel-bg.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  .slider-arrows{
+    top: 225px;
+    opacity: 0.5;
+  }
+}
+.travel-slider {
+  &__head {
+    background-repeat: no-repeat;
+    background-position: top left;
+    min-height: 780px;
+  }
+  &__descr {
+    margin-top: -230px;
+    padding-top: 160px;
+    padding-left: 132px;
+    min-height: 320px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    .descr__head{
+      position: relative;
+      padding-right: 78px;
+      img{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  &__subtitle {
+    text-align: right;
+    padding-right: 80px;
+    padding-top: 132px;
+  }
+  &__btn {
+    text-align: center;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    &-item {
+      min-height: 200px;
+      margin-bottom: 66px;
+      position: relative;
+    }
+    &-subtitle {
+      text-align: right;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 8px;
+      opacity: 0.5;
+      transform: rotate(-90deg);
+      top: 97px;
+      left: -97px;
+      width: 200px;
+      height: 0;
+      position: absolute;
+      white-space: nowrap;
+    }
+    &-title {
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 36px;
+      padding-left: 40px;
+      position: relative;
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 0;
+        text-align: right;
+        letter-spacing: 5.25px;
+        opacity: 0.75;
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+      }
+    }
+  }
+}
+// end travel
 @import "media";
