@@ -43,7 +43,7 @@ a {
     top: 50%;
   }
 }
-.headline-right{
+.headline-right {
   opacity: 0.5;
   letter-spacing: 7.33px;
   line-height: 32px;
@@ -141,13 +141,14 @@ a {
   }
 }
 .surf,
-.travel{
+.holder {
   padding: 160px 0 120px;
 }
-.travel{
+.holder {
   padding-bottom: 265px;
+  margin-bottom: 35px;
 }
-.descr{
+.descr {
   display: inline-block;
   padding-left: 5px;
   &__head {
@@ -157,4 +158,61 @@ a {
       font-weight: 100;
     }
   }
+}
+// для инпут намбера
+.quantity {
+  display: inline-block;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 50px;
+  height: 42px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: static;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  top: 45px;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  right: 0px;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  right: 25px;
 }
